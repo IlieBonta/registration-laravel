@@ -15,8 +15,6 @@ Route::get('/contact', function () {
 })->name('contact');
 
 /* создаем обработчик url адресса */
-Route::post('/contact/submit', function () {
-    return Request::all();
-})->name('contact-form');
-
+/*была проблема пока не прописал полный путь до контроллера */
+Route::post('/contact/submit', 'App\Http\Controllers\ContactController@submit')->name('contact-form');
 

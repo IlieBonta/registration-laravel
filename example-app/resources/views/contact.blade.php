@@ -7,6 +7,18 @@
 
 @section('content')
     <h1> привет ты на странице контактов </h1>
+    @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                 <li> {{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+
+
     <form action="{{ route('contact-form') }}" method="post">
         {{-- добавляем зашишеный ключ(ключ безопасности) ларавел добавляет таким образов безопасность в формы --}}
         @csrf
