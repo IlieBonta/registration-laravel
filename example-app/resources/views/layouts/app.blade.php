@@ -30,6 +30,10 @@
             @include('include.aside')
         </div>
 
+        @if(Request::is('/')) {{--если мы на главной странице то выйдем меню--}}
+            @include('include.menu.menu-list')
+        @endif
+
     </div>
 </div>
 
