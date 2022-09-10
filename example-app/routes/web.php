@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 
 /*обработчик url адресса*/
@@ -19,7 +20,7 @@ Route::get('/contact/all/{id}/update',
     ->name('contact-update');
 
 /* создаем обработчик url адресса */
-/*была проблема пока не прописал полный путь до контроллера */
+/* полный путь до контроллера */
 Route::get('/contact/all/{id}',
     'App\Http\Controllers\ContactController@showOneMessage')
     ->name('contact-data-one');
@@ -35,3 +36,10 @@ Route::get('/contact/all/{id}/delete',
 Route::get('/contact/all', 'App\Http\Controllers\ContactController@allData')->name('contact-data');
 Route::post('/contact/submit', 'App\Http\Controllers\ContactController@submit')->name('contact-form'); /* '/contact/submit' - когда переходим по этому адрессу мы получаем все данные из формы */
 
+Route::get('sign-up', function () {
+    return 'hello world';
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

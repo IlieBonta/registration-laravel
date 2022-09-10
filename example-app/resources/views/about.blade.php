@@ -7,7 +7,7 @@
 
 @section('content')
     <div class="container d-flex p-2">
-        <div class="card bg-dark text-white">
+        <div class="card md-4 text-white">
             <img class="card-img"
                  src="https://static.vecteezy.com/system/resources/previews/005/618/231/original/pizza-in-cardboard-box-food-delivery-hot-italian-fast-food-open-carton-delivery-package-hand-draw-illustration-for-prints-posters-flyers-and-invitations-vector.jpg"
                  alt="Card image">
@@ -23,8 +23,8 @@
                     voluptatum.
                     This is a wider card with supporting text below as a natural lead-in to additional content.<br>
                     This content is a little bit longer.</h5>
-                </p>
             </div>
         </div>
     </div>
 @endsection
+

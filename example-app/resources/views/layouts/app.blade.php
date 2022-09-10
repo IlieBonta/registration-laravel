@@ -14,12 +14,11 @@
 
 {{--прописываем условие - если мы на главной то откроется файл hero --}}
 @if(Request::is('/'))
-@include('include.hero')
+    @include('include.hero')
 @endif
 
 <div class="container mt-5">
-@include('include.messages')
-
+    @include('include.messages')
 
 
     <div class="row">
@@ -30,13 +29,13 @@
             @include('include.aside')
         </div>
 
-        @if(Request::is('/')) {{--если мы на главной странице то выйдем меню--}}
+        @if(Request::is('/'))
+            {{--если мы на главной странице то выйдем меню--}}
             @include('include.menu.menu-list')
         @endif
 
     </div>
 </div>
-
 
 @include('include.footer')
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
